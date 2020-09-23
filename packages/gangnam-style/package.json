@@ -1,0 +1,37 @@
+{
+  "name": "gangnam-style",
+  "version": "0.0.0-beta-1",
+  "description": "wopa's design system",
+  "keywords": [
+    "wopa",
+    "react",
+    "design system"
+  ],
+  "main": "lib/index.js",
+  "author": "Joao Gloria <jhfgloria@gmail.com> (https://github.com/jhfgloria)",
+  "homepage": "https://gangnamstyle.design/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhfgloria/gangnam-style"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "sb": "6.0.21"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.11.6",
+    "@babel/core": "7.11.6",
+    "@storybook/addon-actions": "6.0.21",
+    "@storybook/addon-essentials": "6.0.21",
+    "@storybook/addon-links": "6.0.21",
+    "@storybook/react": "6.0.21",
+    "babel-loader": "8.1.0",
+    "react-is": "16.13.1"
+  },
+  "scripts": {
+    "develop:watch": "babel components --out-dir lib --presets=@babel/preset-env,@babel/preset-react --watch",
+    "build-gangnam": "babel components --out-dir lib --presets=@babel/preset-env,@babel/preset-react --copy-files --no-copy-ignored",
+    "prepublish": "npm run build-gangnam",
+    "postpublish": "rm -rf lib"
+  }
+}
